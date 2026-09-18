@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Shortener</title>
+</head>
+<body>
+    <main>
+        <h1>URL Shortener</h1>
+
+        <form id="shorten-form">
+            <label for="url-input">URL</label>
+            <input id="url-input" name="url" type="url" required>
+            <button id="shorten-btn" type="submit">Shorten URL</button>
+        </form>
+
+        <div id="result" aria-live="polite"></div>
+        <div id="error" role="alert" aria-live="assertive"></div>
+
+        <h2>Shortened Links</h2>
+        <table id="links-table">
+            <thead>
+                <tr>
+                    <th scope="col">Code</th>
+                    <th scope="col">URL</th>
+                    <th scope="col">Clicks</th>
+                </tr>
+            </thead>
+            <tbody id="links-body"></tbody>
+        </table>
+    </main>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
